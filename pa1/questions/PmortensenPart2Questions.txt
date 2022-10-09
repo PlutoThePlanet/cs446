@@ -1,0 +1,55 @@
+1. What is a system call? What system calls do we implement in our c code?
+   A system call is how we interact with the kernel of our operating system. 
+   By using system calls, we can request our kernel to perform actions and 
+   complete programs. We are able to allow the user to request processes, 
+   and allow the user to (behind the scenes) request computer resources. 
+   In our code, we implement fork() to create new child processes, we use
+   wait() to make sure these processes finish running before starting on
+   another one, we read from our batch file if we use one, and we write to
+   the console when there are errors (to name just a few examples). All of
+   these calls use various recources of our system and therefore need to 
+   be called via a system call.
+
+2. We use execvp in our program. We could just as easily use execve. Compare and contrast the two.
+   In this project, we are using execvp to execute system calls already defined 
+   by our systems. The first argument is the file to be executed, and the second
+   argument is our char* list of argument commands (presented in an array of 
+   pointers to null-terminated strings). Comparing this to execve, execve executes
+   a program (whereas execvp executes a file -- pointed to by our filename 
+   argument). Also, where execvp returns an integer value to indicate success or
+   failure, execve does not return. Instead, "the text, data, bss, and stack of
+   the calling process are overwritten by that of the program loaded" (from 
+   documentation). Both need two arguments of filename and char* arguments, but
+   one executes a file while the other executes a process.
+
+3. We use kill to terminate our program. This is not a graceful way to stop the program. 
+   What alternative system calls are there? What would we need to consider whenever we 
+   called these alternatives? Why is kill easier here?
+   Using the kill() system call is a very brute-force method of shutting down our shell. 
+   kill() is a very sudden process, and  is typically reserved for force-quitting a 
+   process that is either stuck, refusing to start, or otherwise just being problematic.
+   But, in the case of our code, it is (hopefully) not stuck; we're generally using kill()
+   to end our program. Alternatively, we can use sigterm to end our process(es). Using
+   sigterm gives our system the opportunity to perpare for a shutdown and perform any
+   cleanup tasks that may be needed before termination (or the system may refuse to shut
+   down if certain circumstances apply). If we were to use sigkill, we would need to make
+   sure that no issues are present that would allow the system to deny a shutdown, and we
+   would need to also allow for an aprox 30 sec "grace period" where the system is able
+   to cleanup and gracefully shutdown. For our circumstances, using the kill() command
+   is much easier because we don't have to account for all of these extra steps or
+   possible issues (especially while we are testing our code) and we can simply
+   (albeit brutally) shut down our code almost instantly and prepare for our 
+   next testing cycle.
+
+4. If you were to redesign this program, how could you improve it? 
+   Hint: think about the issues you saw while you ran the provided 
+   executable, and any ineffecient functionality or system calls. 
+   If I were to redesign this program, I would improve it by allowing the 
+   system to prepare for shutdown (sigkill) and I would generally expand
+   upon the program. Edgecases / accounting for user input can easily end
+   up taking most of your time when designing and implementing a project.
+   People do unexpected things and, if not accounted for or handled
+   correctly, their actions can have accidentally devastating effects.
+   Also, if our code were to be used long-term, replacing kill() would 
+   probably be better for the overall health or our user's system (as
+   noted above).

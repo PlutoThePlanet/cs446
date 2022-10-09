@@ -1,0 +1,60 @@
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 166
+model name	: Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz
+stepping	: 0
+cpu MHz		: 1608.000
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs itlb_multihit
+bogomips	: 3216.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+Linux version 5.13.0-27-generic (buildd@lgw01-amd64-045) (gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #29~20.04.1-Ubuntu SMP Fri Jan 14 00:32:30 UTC 2022
+4233.17 2013.73
+4233.18 2013.73
+   7       0 loop0 2237 0 173000 1227 0 0 0 0 0 3696 1227 0 0 0 0 0 0
+   7       1 loop1 168 0 7696 90 0 0 0 0 0 440 90 0 0 0 0 0 0
+   7       2 loop2 43 0 696 23 0 0 0 0 0 40 23 0 0 0 0 0 0
+   7       3 loop3 62 0 2134 19 0 0 0 0 0 64 19 0 0 0 0 0 0
+   7       4 loop4 48 0 718 24 0 0 0 0 0 52 24 0 0 0 0 0 0
+   7       5 loop5 800 0 58176 150 0 0 0 0 0 2824 150 0 0 0 0 0 0
+   7       6 loop6 45 0 702 18 0 0 0 0 0 60 18 0 0 0 0 0 0
+   7       7 loop7 14 0 34 0 0 0 0 0 0 12 0 0 0 0 0 0 0
+  11       0 sr0 9 0 4 1 0 0 0 0 0 20 1 0 0 0 0 0 0
+  11       1 sr1 9 0 4 1 0 0 0 0 0 24 1 0 0 0 0 0 0
+   8       0 sda 30957 7571 2444904 20023 14835 18407 1099514 17970 0 48240 41996 0 0 0 0 2349 4002
+   8       1 sda1 148 1013 12006 91 3 0 10 1 0 140 92 0 0 0 0 0 0
+   8       2 sda2 2 0 4 0 0 0 0 0 0 8 0 0 0 0 0 0 0
+   8       5 sda5 30686 6558 2428642 19849 14832 18407 1099504 17969 0 48108 37819 0 0 0 0 0 0
+   7       8 loop8 50 0 726 16 0 0 0 0 0 32 16 0 0 0 0 0 0
+   7       9 loop9 43 0 694 15 0 0 0 0 0 24 15 0 0 0 0 0 0
+   7      10 loop10 48 0 718 15 0 0 0 0 0 32 15 0 0 0 0 0 0
+   7      11 loop11 57 0 2112 51 0 0 0 0 0 52 51 0 0 0 0 0 0
+   7      12 loop12 15 0 60 1 0 0 0 0 0 12 1 0 0 0 0 0 0
+   7      13 loop13 57 0 2186 21 0 0 0 0 0 48 21 0 0 0 0 0 0
+   7      14 loop14 55 0 2146 23 0 0 0 0 0 28 23 0 0 0 0 0 0
+   7      15 loop15 2400 0 176938 91 0 0 0 0 0 2784 91 0 0 0 0 0 0
+cpu  76041 1831 14727 210789 691 0 276 0 0 0
+cpu0 76041 1831 14727 210789 691 0 276 0 0 0
+intr 1137305 31 1702 0 0 0 0 0 0 0 0 0 0 4414 0 3035 3033 0 0 14771 39298 30599 93783 25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ctxt 5204215
+btime 1646428003
+processes 5317
+procs_running 4
+procs_blocked 0
+softirq 368076 4 108704 546 41152 47043 0 1643 0 0 168984

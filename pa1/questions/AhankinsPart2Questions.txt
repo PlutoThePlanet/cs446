@@ -1,0 +1,20 @@
+1. A system call is how a user or program requests services from the kernel of the operating system.
+It allows you to initiate processes, retrieve data, modify data, and do anything that requires
+communication with the kernel. In our c code, we implement execvp(), which allows us to call and run
+Unix commands. We also implement fork() in order to create new child processes from other processes.
+
+2. Execvp executes a file, specified in the arguments, which calls a process from the exec library.
+Execve loads a program, replacing the current running program with the new one. It initializes a 
+new stack, heap, and data segments for this new program.
+
+3. Kill is traditionally only used when a process is unresponsive, and it must be forcibly shut down. 
+It is not a graceful, or particularly safe way to shut down a process, and data could be lost. We use
+it here because it is simple, and we are not risking loss of data. If I wasn't using kill, I would
+likely loop through until an exit variable was set to true, which would terminate the loop without
+the use of kill.
+
+4. If i were redesigning the project, I would not utilize the kill command. I would instead create a 
+constant loop, ending only when the exit variable was set to true. This is actually how I originally
+wrote the code. This would be safer than utilizing kill, since it is very abrupt and can cause data
+to be destroyed. I also might have used a 2 dimensional array, or vector, because the array of pointers
+gave me a lot of trouble, and I have difficulty navigating strings in C anyway.
